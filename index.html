@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add the Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="form">
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo">
+        </div>
+        <h1 class="form-title">Order Form</h1>
+        <h2 class="form-subtitle">Order Your Favorite Dishes from MY Kitchen! Fill in the details below to place your order.</h2>
+        <div class="basic-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+
+            <label for="cuisine">Type of Cuisine:</label>
+            <select id="cuisine" name="cuisine">
+                <option value="italian">Italian</option>
+                <option value="chinese">Chinese</option>
+                <option value="healthy">Healthy Options</option>
+                <option value="mexican">Mexican</option>
+                <option value="specials">Specials</option>
+            </select><br><br>
+
+            <label for="payment">Mode of Payment:</label>
+            <input type="text" id="payment" name="payment"><br><br>
+
+            <label for="dine-option">Dine-in / Take-out:</label><br>
+            <div class="radio-group">
+                <input type="radio" id="dine-in" name="dine-option" value="dine-in">
+                <label for="dine-in">Dine-in</label>
+            </div>
+            <div class="radio-group" style="margin-left: 20px;">
+                <input type="radio" id="take-out" name="dine-option" value="take-out">
+                <label for="take-out">Take-out</label>
+            </div>
+
+            <label for="comments">Comments/Instruction:</label><br>
+            <textarea id="comments" name="comments"></textarea><br><br>
+
+            <div id="dropdown">
+                <button class="dropdown-toggle">
+                    <span>Menu</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#">Italian</a></li>
+                    <li class="menu-item"><a href="#">Chinese</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="submenu-toggle healthy-options">
+                            <span>Healthy Options</span>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </a>
+                        <ul class="submenu healthy-options-submenu">
+                            <li class="submenu-item"><a href="#">Vegetarian</a></li>
+                            <li class="submenu-item"><a href="#">Vegan</a></li>
+                            <li class="submenu-item"><a href="#">Gluten-Free</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#">Mexican</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="submenu-toggle specials">
+                            <span>Specials</span>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </a>
+                        <ul class="submenu specials-submenu">
+                            <li class="submenu-item"><a href="#">Ice cream</a></li>
+                            <li class="submenu-item"><a href="#">Pie</a></li>
+                            <li class="submenu-item"><a href="#">Chef's Special</a></li>
+                            <li class="submenu-item"><a href="#">Cake</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="order-btn">Order Placed</button>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
